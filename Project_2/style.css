@@ -1,0 +1,35 @@
+body {
+    background-color: #dbae67;
+    background-image: url('/images/2002-01-removebg-preview.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+}
+
+h1 {
+    color: #e2aa20;
+}
+
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #e2aa20;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #dbae67;
+}
+
+.rating {
+    background-color: #e2aa20;
+}
+
+.gender[class="gender"]:hover+svg,
+.gender[class="gender"]:checked+svg,
+.gender[class="gender"]:focus+svg,
+.satisfaction[class="satisfaction"]:hover+svg,
+.satisfaction[class="satisfaction"]:checked+svg,
+.satisfaction[class="satisfaction"]:focus+svg {
+    background-color: #e2aa20;
+}

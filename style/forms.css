@@ -1,0 +1,251 @@
+body {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 40px 20px;
+    margin: 0;
+    background-color: #84d4fa;
+}
+
+.container {
+    max-width: 100vh;
+    /* min-width: 400px; */
+    margin: auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #0000001a;
+}
+
+img {
+    user-select: none;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    margin: 0 0 20px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+span {
+    color: #ff0000;
+}
+
+th,
+td {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+table {
+    width: 100%;
+}
+
+@media (min-width: 568px) {
+
+    th,
+    td {
+        word-break: keep-all;
+    }
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0 0 0;
+    letter-spacing: 1px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    vertical-align: middle;
+    background-color: #f7f7f7;
+}
+
+input[type="radio"] {
+    position: absolute;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    margin-right: 10px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+input[type="submit"],
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit {
+    display: none;
+    padding: 10px;
+    background-color: #1ED760;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #004494;
+}
+
+.section-2 {
+    display: none;
+}
+
+.section-3 {
+    display: none;
+}
+
+
+.rating {
+    display: flex;
+    justify-content: space-evenly;
+    /* box-shadow: 0 0 0 5px #ffffff80; */
+    background-color: #0056b3;
+    padding: .4rem .4rem .1rem .4rem;
+    border-radius: 7px;
+    margin-bottom: 20px;
+}
+
+.svg {
+    fill: #f2f2f2;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.super-happy,
+.neutral,
+.super-sad {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.super-happy[class="super-happy"]:hover+svg,
+.super-happy[class="super-happy"]:checked+svg,
+.super-happy[class="super-happy"]:focus+svg {
+    fill: #00cc4f;
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+.neutral[class="neutral"]:hover+svg,
+.neutral[class="neutral"]:checked+svg,
+.neutral[class="neutral"]:focus+svg {
+    fill: #e8d600;
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+.super-sad[class="super-sad"]:hover+svg,
+.super-sad[class="super-sad"]:checked+svg,
+.super-sad[class="super-sad"]:focus+svg {
+    fill: #EF2A10;
+    transition: 1.5s;
+    transform: scale(1.05);
+}
+
+.gender[class="gender"]:hover+svg,
+.gender[class="gender"]:checked+svg,
+.gender[class="gender"]:focus+svg,
+.satisfaction[class="satisfaction"]:hover+svg,
+.satisfaction[class="satisfaction"]:checked+svg,
+.satisfaction[class="satisfaction"]:focus+svg {
+    fill: #EF2A10;
+    background-color: #0056b3;
+    border-radius: 50%;
+    transition: .1s;
+    transform: scale(1.2);
+}
+
+.card {
+    font-size: 18px;
+    margin-block: 20px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card .thumbnail,
+svg {
+    max-width: 100%;
+    cursor: pointer;
+    transition: all .5s ease-in-out 0s;
+    object-position: 0px;
+    margin-inline: 10px;
+}
+
+.card .thumbnail {
+    cursor: pointer;
+    border-radius: 5px;
+    /* margin: 10px; */
+    transition: transform 0.2s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* เพิ่มสไตล์สำหรับองค์ประกอบที่ลากได้ */
+#draggable {
+    cursor: grab;
+    touch-action: none;
+  }
+  
+
+.image-container {
+    max-width: 250px;
+    cursor: pointer;
+    align-items: center;
+    /* display: flex; */
+    justify-content: space-between;
+    position: fixed;
+    right: 0;
+    bottom: 15%;
+    z-index: 1;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: grab;
+}
+
+.text {
+    position: absolute;
+    bottom: 110px;
+    left: 10%;
+    transform: translateX(-50%);
+    background-color: #000000b3;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}

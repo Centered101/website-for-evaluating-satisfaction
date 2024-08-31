@@ -1,0 +1,30 @@
+body {
+    background-color: #64a8d7;
+}
+
+h1 {
+    color: #0056b3;
+}
+
+input[type="submit"],
+input[type="button"] {
+    background-color: #0056b3;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    background-color: #64a8d7;
+}
+
+.rating {
+    background-color: #0056b3;
+}
+
+.gender[class="gender"]:hover+svg,
+.gender[class="gender"]:checked+svg,
+.gender[class="gender"]:focus+svg,
+.satisfaction[class="satisfaction"]:hover+svg,
+.satisfaction[class="satisfaction"]:checked+svg,
+.satisfaction[class="satisfaction"]:focus+svg {
+    background-color: #0056b3;
+}
